@@ -3,9 +3,11 @@ package com.example.structuredLogging;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import org.springframework.boot.json.JsonWriter;
 import org.springframework.boot.logging.structured.StructuredLogFormatter;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("withStructure")
 public class CustomLogs implements StructuredLogFormatter<ILoggingEvent> {
 
     private final JsonWriter<ILoggingEvent> writer=JsonWriter.<ILoggingEvent>of((member)->{

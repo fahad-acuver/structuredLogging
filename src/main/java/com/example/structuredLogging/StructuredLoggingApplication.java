@@ -3,9 +3,10 @@ package com.example.structuredLogging;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.swing.*;
+
 @SpringBootApplication
 public class StructuredLoggingApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(StructuredLoggingApplication.class, args);
 	}
